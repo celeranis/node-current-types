@@ -1,4 +1,4 @@
-import type { Performance } from 'node:perf_hooks';
+import { Performance } from 'node:perf_hooks';
 
 declare global {
 	var performance: Performance
@@ -44,3 +44,5 @@ declare global {
 		prototype: DOMException
 	}
 }
+
+export {};

@@ -1,5 +1,5 @@
-import type { Blob as _Blob } from 'buffer';
-import type * as undici from 'undici';
+import { Blob as _Blob } from 'buffer';
+import * as undici from 'undici';
 
 declare global {
 	var fetch: typeof undici.fetch
@@ -25,3 +25,5 @@ declare global {
 
 	interface Blob extends _Blob {}
 }
+
+export {};

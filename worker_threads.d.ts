@@ -1,4 +1,4 @@
-import type * as WorkerThreads from 'node:worker_threads';
+import * as WorkerThreads from 'node:worker_threads';
 
 declare module "worker_threads" {
 	interface BroadcastChannel extends EventTarget {}
@@ -76,3 +76,5 @@ declare global {
 	interface BroadcastChannel extends WorkerThreads.BroadcastChannel {}
 	var BroadcastChannel: typeof WorkerThreads.BroadcastChannel
 }
+
+export {};

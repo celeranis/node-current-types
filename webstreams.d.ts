@@ -1,4 +1,4 @@
-import type * as WebStreams from 'node:stream/web';
+import * as WebStreams from 'node:stream/web';
 
 declare module "stream/web" {
 	interface CompressionStream extends ReadableWritablePair<string | BufferSource, Uint8Array> {}
@@ -81,3 +81,5 @@ declare global {
 		prototype: ReadableStreamBYOBRequest
 	}
 }
+
+export {};

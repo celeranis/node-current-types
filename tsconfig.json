@@ -2,8 +2,8 @@
 	"include": ["*.d.ts"],
 	"exclude": ["node_modules/"],
 	"compilerOptions": {
-		"module": "CommonJS",
 		"target": "ESNext",
+		"moduleResolution": "Node",
 		"lib": ["ES2022"],
 		"noImplicitAny": true,
 		"noImplicitThis": true,
