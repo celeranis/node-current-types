@@ -1,5 +1,5 @@
 {
-	"name": "node-current-types",
+	"name": "@celeranis/node-current-types",
 	"description": "for the impatient using node versions ahead of LTS (me)",
 	"version": "0.1.0",
 	"license": "MIT",
