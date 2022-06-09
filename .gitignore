@@ -33,3 +33,8 @@ node_modules/
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# don't sync lockfiles
+pnpm-lock.yaml
+yarn.lock
+package-lock.json
