@@ -1,3 +1,4 @@
+// TypeScript lib.esnext.d.ts doesn't have these for some reason
 interface Array<T> {
 	findLast<S extends T>(predicate: (this: void, value: T, index: number, obj: T[]) => value is S, thisArg?: any): S | undefined;
 	findLast(predicate: (value: T, index: number, obj: T[]) => unknown, thisArg?: any): T | undefined;
