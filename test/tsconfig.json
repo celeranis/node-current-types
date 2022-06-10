@@ -1,0 +1,10 @@
+{
+	"include": ["./*.spec.ts"],
+	"compilerOptions": {
+		"types": [".."],
+		"strict": true,
+		"module": "NodeNext",
+		"target": "ESNext",
+		"lib": ["ESNext"]
+	}
+}
