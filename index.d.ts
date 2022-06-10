@@ -3,9 +3,9 @@
 /// <reference types="node" />
 
 import "./esnext";
+import "./events";
 import "./fetch";
 import "./misc-globals";
 import "./node-namespace";
 import "./test";
 import "./webstreams";
-import "./worker_threads";
