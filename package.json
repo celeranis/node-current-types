@@ -1,8 +1,15 @@
 {
 	"name": "@celeranis/node-current-types",
 	"description": "for the impatient using node versions ahead of LTS (me)",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"license": "MIT",
+	"repository": "celeranis/node-current-types",
+	"keywords": [
+		"fetch",
+		"node",
+		"types",
+		"globals"
+	],
 	"types": "index.d.ts",
 	"dependencies": {
 		"@types/node": "^17.0.41",
@@ -10,5 +17,11 @@
 	},
 	"publishConfig": {
 		"access": "public"
-	}
+	},
+	"packageManager": "pnpm@7.1.9",
+	"engines": {
+		"node": ">=18.0.0"
+	},
+	"engineStrict": false,
+	"author": "celeranis"
 }
