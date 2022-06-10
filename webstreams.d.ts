@@ -80,6 +80,11 @@ declare global {
 		new(): never
 		prototype: ReadableStreamBYOBRequest
 	}
+	
+	interface ReadableStreamDefaultReadDoneResult extends WebStreams.ReadableStreamDefaultReadDoneResult {}
+	interface ReadableStreamDefaultReadValueResult<T> extends WebStreams.ReadableStreamDefaultReadValueResult<T> {}
+	
+	type ReadableStreamDefaultReadResult<T> = WebStreams.ReadableStreamDefaultReadResult<T>
 }
 
 export {};

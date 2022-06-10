@@ -1,4 +1,16 @@
-import { Blob as _Blob } from 'buffer';
+import { Blob as _Blob } from 'node:buffer';
+
+declare module "buffer" {
+	interface Blob {
+		/**
+		 * Returns a new `ReadableStream` that allows the content of the `Blob` to be read.
+		 * @since v16.7.0
+		 */
+		stream(): ReadableStream // FIXME: this is broken due to conflicts with undici and @types/node
+		stream(): never
+	}
+}
+
 import * as undici from 'undici';
 
 declare global {
@@ -15,6 +27,8 @@ declare global {
 
 	var FormData: typeof undici.FormData
 	interface FormData extends undici.FormData {}
+	
+	type FormDataEntryValue = undici.FormDataEntryValue
 
 	type BodyInit = undici.BodyInit
 	interface RequestInit extends undici.RequestInit {}
