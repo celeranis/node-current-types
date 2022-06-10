@@ -10,6 +10,9 @@
 		"types",
 		"globals"
 	],
+	"scripts": {
+		"test": "tsc --noEmit test"
+	},
 	"types": "index.d.ts",
 	"dependencies": {
 		"@types/node": "^17.0.41",
@@ -18,10 +21,12 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"packageManager": "pnpm@7.1.9",
 	"engines": {
 		"node": ">=18.0.0"
 	},
 	"engineStrict": false,
-	"author": "celeranis"
+	"author": "celeranis",
+	"devDependencies": {
+		"typescript": "^4.7.3"
+	}
 }
