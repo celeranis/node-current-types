@@ -7,14 +7,6 @@ on:
   push:
   pull_request:
 
-  workflow_dispatch:
-    inputs:
-      do-update:
-        description: Update dependencies
-        type: boolean
-        default: false
-        required: false
-
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -35,12 +27,7 @@ jobs:
         run: |
           npm ci
           npm ls
-          npm outdated
-        
-      - name: Update dependencies
-        if: inputs.do-update
-        continue-on-error: true
-        run: npm update
+          npm outdated --long
 
       - name: Test type-checking
         run: npm test
