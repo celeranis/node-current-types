@@ -35,7 +35,7 @@ jobs:
           npm ci
           npm i -D typescript@${{ matrix.typescript-version }}
           npm ls
-          npm outdated --long
+          npm outdated --long || npm update
 
       - name: Test type-checking
         run: npm test
