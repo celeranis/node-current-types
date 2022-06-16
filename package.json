@@ -11,7 +11,7 @@
 		"globals"
 	],
 	"scripts": {
-		"test": "tsc --noEmit test"
+		"test": "tsc --noEmit"
 	},
 	"types": "index.d.ts",
 	"dependencies": {
