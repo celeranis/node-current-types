@@ -5,6 +5,9 @@ const event = new Event('hello', {
 })
 new Event('hello')
 
+// @ts-expect-error: should not be any
+event.blarg()
+
 const target = new EventTarget()
 target.dispatchEvent(event)
 target.addEventListener('hello', (event: Event) => {
@@ -20,6 +23,14 @@ target.addEventListener('hello', (event: Event) => {
 	once: true, 
 	passive: true, 
 	signal: new AbortSignal
+})
+
+// @ts-expect-error: should not be any
+target.blarg()
+
+target.addEventListener('bar', (event) => {
+	// @ts-expect-error: should not be any
+	event.blarg()
 })
 
 // @ts-expect-error: not a real value

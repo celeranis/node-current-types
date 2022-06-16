@@ -9,6 +9,10 @@ async () => {
 			foo: 'bar'
 		})
 	})
+	
+	// @ts-expect-error: should not be any
+	response.blarg()
+	
 	if (
 		response.status === 200
 		&& response.body instanceof ReadableStream
@@ -23,9 +27,15 @@ async () => {
 		const textPromise: Promise<string> = response.text()
 		const jsonPromise: Promise<unknown> = response.json()
 		
+		// @ts-expect-error: should not be any
+		;(await response.text()).blarg()
+		
 		const blob: Blob = await response.blob()
 		// @ts-ignore: FIXME: see fetch.d.ts:9
 		const blobStream: ReadableStream = blob.stream()
+		
+		// @ts-expect-error: should not be any
+		;(await response.blob()).blarg()
 		
 		{
 			const headers: Headers = response.headers
@@ -42,6 +52,12 @@ async () => {
 			const headerNames: IterableIterator<string> = headers.values()
 			const headerValues: IterableIterator<string> = headers.keys()
 			headers.has('baz') === true
+
+			// @ts-expect-error: should not be any
+			response.headers.blarg()
+		
+			// @ts-expect-error: should not be any
+			headers.get('foo').blarg()
 		}
 		
 		{
@@ -55,6 +71,12 @@ async () => {
 				// @ts-expect-error: should be Uint8Array
 				chunk.value as undefined
 			}
+			// @ts-expect-error: should not be any
+			response.body.blarg()
+			// @ts-expect-error: should not be any
+			response.body.getReader().blarg()
+			// @ts-expect-error: should not be any
+			chunk.blarg()
 		}
 		
 		{
@@ -66,10 +88,25 @@ async () => {
 				} else {
 					(await entry.arrayBuffer()).byteLength === 0
 				}
+				// @ts-expect-error: should not be any
+				entry.blarg()
 			}
+			// @ts-expect-error: should not be any
+			formData.blarg()
 		}
+
+		
 	}
 }
 
-export {}
+// @ts-expect-error: should not be any
+fetch.foo.bar.blah
+
+// @ts-expect-error: should validate parameters
+fetch('https://example.com/', 'foo')
+
+// @ts-expect-error: should validate parameters
+fetch()
+
+export {};
 

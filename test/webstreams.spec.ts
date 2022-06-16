@@ -6,6 +6,9 @@ async () => {
 	const decoder: TextDecoderStream = new TextDecoderStream()
 	
 	const someReadable = (await fetch('https://example.com/')).body!
+
+	// @ts-expect-error: should not be any
+	someReadable.blarg()
 	
 	const compressed = someReadable.pipeThrough(compress)
 	const decompressed = compressed.pipeThrough(decompress)
