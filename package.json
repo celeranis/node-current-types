@@ -15,7 +15,7 @@
 	},
 	"types": "index.d.ts",
 	"dependencies": {
-		"@types/node": "^17.0.41",
+		"@types/node": "^18.0.0",
 		"undici": "^5.4.0"
 	},
 	"publishConfig": {
