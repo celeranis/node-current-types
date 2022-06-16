@@ -7,5 +7,4 @@ import "./events";
 import "./fetch";
 import "./misc-globals";
 import "./node-namespace";
-import "./test";
 import "./webstreams";

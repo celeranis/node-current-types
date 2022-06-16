@@ -66,7 +66,6 @@ This library extends and depends on existing definitions from `@types/node`.
 	which are currently missing from TypeScript's `lib.esnext.d.ts`
 
 #### Module extensions
-- Added: [`node:test`](https://nodejs.org/dist/latest-v18.x/docs/api/test.html)
 - Modified: `worker_threads`
 	- Updated `MessagePort` and `BroadcastChannel` to correctly extend `EventTarget`
 - Modified: `process`
