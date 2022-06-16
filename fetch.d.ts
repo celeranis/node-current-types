@@ -1,15 +1,15 @@
 import { Blob as _Blob } from 'node:buffer';
 
-declare module "buffer" {
-	interface Blob {
-		/**
-		 * Returns a new `ReadableStream` that allows the content of the `Blob` to be read.
-		 * @since v16.7.0
-		 */
-		stream(): ReadableStream // FIXME: this is broken due to conflicts with undici and @types/node
-		stream(): never
-	}
-}
+// declare module "buffer" {
+// 	interface Blob {
+// 		/**
+// 		 * Returns a new `ReadableStream` that allows the content of the `Blob` to be read.
+// 		 * @since v16.7.0
+// 		 */
+// 		stream(): ReadableStream // FIXME: this is broken due to conflicts with undici and @types/node
+// 		stream(): never
+// 	}
+// }
 
 import * as undici from 'undici';
 

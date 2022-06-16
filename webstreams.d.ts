@@ -25,7 +25,7 @@ declare module "stream/web" {
 		view: Buffer | NodeJS.TypedArray | DataView
 	}
 	
-	interface ReadableByteStreamController {
+	interface ReadableByteStreamController { // @ts-ignore: bad definitions from @types/node
 		readonly byobRequest: ReadableStreamBYOBReader | undefined
 	}
 }

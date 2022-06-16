@@ -71,8 +71,8 @@ This library extends and depends on existing definitions from `@types/node`.
 - Modified: `process`
 	- Added [`process.getActiveResourcesInfo()`](https://nodejs.org/dist/latest-v18.x/docs/api/process.html#processgetactiveresourcesinfo)
 	- Added [`process.setSourceMapsEnabled()`](https://nodejs.org/dist/latest-v18.x/docs/api/process.html#processsetsourcemapsenabledval)
-- Modified: `buffer`
-	- Added `ReadableStream` return type for the `Blob.stream()` method[^1]
+<!-- - Modified: `buffer`
+	- Added `ReadableStream` return type for the `Blob.stream()` method[^1] -->
 
 ## Installation
 ```sh
@@ -92,4 +92,4 @@ After installation, add this to your project's `tsconfig.json` and/or `jsconfig.
 "types": ["@celeranis/node-current-types"]
 ```
 
-[^1]: The `Blob.stream()` method has broken, conflicting type declarations. See #1.
+<!-- [^1]: The `Blob.stream()` method has broken, conflicting type declarations. See #1. -->

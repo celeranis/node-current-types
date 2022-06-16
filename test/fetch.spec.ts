@@ -30,9 +30,9 @@ async () => {
 		// @ts-expect-error: should not be any
 		;(await response.text()).blarg()
 		
-		const blob: Blob = await response.blob()
-		// @ts-ignore: FIXME: see fetch.d.ts:9
-		const blobStream: ReadableStream = blob.stream()
+		// const blob: Blob = await response.blob()
+		// FIXME: see fetch.d.ts:9
+		// const blobStream: ReadableStream = blob.stream()
 		
 		// @ts-expect-error: should not be any
 		;(await response.blob()).blarg()
