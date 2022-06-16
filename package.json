@@ -1,7 +1,7 @@
 {
 	"name": "@celeranis/node-current-types",
 	"description": "for the impatient using node versions ahead of LTS (me)",
-	"version": "0.1.1",
+	"version": "0.2.0",
 	"license": "MIT",
 	"repository": "celeranis/node-current-types",
 	"keywords": [
